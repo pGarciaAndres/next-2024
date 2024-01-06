@@ -2,11 +2,19 @@ import Link from 'next/link'
 import { Search } from '../search/search'
 import { Pagination } from '@/app/ui/dashboard/pagination/pagination'
 import styles from '@/app/ui/dashboard/users/users.module.css'
-import { fetchUsers } from '@/app/lib/data'
 import Image from 'next/image'
+import { fetchUsers } from '@/app/lib/data'
 
-export default async function UsersPage() {
-  const users = await fetchUsers()
+type Props = {
+  searchParams: {
+    q: string
+    page: number
+  }
+}
+
+export default async function UsersPage({ searchParams }: Props) {
+  const { q = '', page = 1 } = searchParams
+  const { count, users } = await fetchUsers(q, page)
 
   return (
     <div className={styles.container}>
@@ -43,7 +51,7 @@ export default async function UsersPage() {
                 </div>
               </td>
               <td>{user.email}</td>
-              <td>{user.createdAt.toString().slice(4, 16)}</td>
+              <td>{user.createdAt?.toString().slice(4, 16)}</td>
               <td>{user.isAdmin ? 'Admin' : 'Client'}</td>
               <td>{user.isActive ? 'Active' : 'Inactive'}</td>
               <td>
@@ -62,7 +70,7 @@ export default async function UsersPage() {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={count} />
     </div>
   )
 }
