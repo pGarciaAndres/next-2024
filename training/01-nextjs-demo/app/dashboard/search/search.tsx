@@ -1,9 +1,9 @@
 'use client'
 
 import { MdSearch } from 'react-icons/md'
-import styles from './search.module.css'
 import { usePathname, useSearchParams, useRouter } from 'next/navigation'
 import { useDebouncedCallback } from 'use-debounce'
+import styles from './search.module.css'
 
 export const Search = ({ placeholder }: { placeholder: string }) => {
   const pathname = usePathname()

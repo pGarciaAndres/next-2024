@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import { updateUser } from '@/app/lib/actions'
 import { fetchUserById } from '@/app/lib/data'
 import styles from '@/app/ui/dashboard/users/singleUser/singleUser.module.css'
-import Image from 'next/image'
 
 export default async function SigleUserPage({
   params

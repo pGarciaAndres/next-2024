@@ -1,8 +1,8 @@
 'use client'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import styles from './pagination.module.css'
 import { INIT_PAGE, PER_PAGE } from '@/app/lib/constants'
+import styles from './pagination.module.css'
 
 type Props = {
   count: number

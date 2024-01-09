@@ -1,10 +1,10 @@
 'use server'
 
 import bcrypt from 'bcrypt'
-import { connectToDatabase } from './utils'
-import { Product, User } from './models'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
+import { connectToDatabase } from './utils'
+import { Product, User } from './models'
 import { signIn } from '../auth'
 
 const encryptPwd = (pwd: FormDataEntryValue) => {

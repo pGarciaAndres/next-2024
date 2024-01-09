@@ -1,7 +1,7 @@
+import Image from 'next/image'
 import { updateProduct } from '@/app/lib/actions'
 import { fetchProductById } from '@/app/lib/data'
 import styles from '@/app/ui/dashboard/products/singleProduct/singleProduct.module.css'
-import Image from 'next/image'
 
 export default async function SingleProductPage({
   params

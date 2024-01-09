@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Search } from '../search/search'
+import { Search } from '@/app/dashboard/search/search'
 import { Pagination } from '@/app/ui/dashboard/pagination/pagination'
 import styles from '@/app/ui/dashboard/products/products.module.css'
 import { fetchProducts } from '@/app/lib/data'

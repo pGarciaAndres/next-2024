@@ -1,8 +1,8 @@
 'use client'
 
+import { useState } from 'react'
 import { authenticate } from '@/app/lib/actions'
 import styles from './loginForm.module.css'
-import { useState } from 'react'
 
 export const LoginForm = () => {
   const [error, setError] = useState<string | null>(null)

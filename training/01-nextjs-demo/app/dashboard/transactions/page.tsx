@@ -1,5 +1,5 @@
-import styles from '@/app/ui/dashboard/transactions/transactions.module.css'
 import { Transactions } from '@/app/ui/dashboard/transactions/transactions'
+import styles from '@/app/ui/dashboard/transactions/transactions.module.css'
 
 export default function TransactionsPage() {
   return (

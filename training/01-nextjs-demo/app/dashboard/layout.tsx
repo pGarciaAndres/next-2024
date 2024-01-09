@@ -1,7 +1,7 @@
-import { Navbar } from '../ui/dashboard/navbar/navbar'
+import { Navbar } from '@/app/ui/dashboard/navbar/navbar'
 import { Sidebar } from '@/app/ui/dashboard/sidebar/sidebar'
-import styles from '../ui/dashboard/dashboard.module.css'
 import { Footer } from '@/app/ui/footer/footer'
+import styles from '@/app/ui/dashboard/dashboard.module.css'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

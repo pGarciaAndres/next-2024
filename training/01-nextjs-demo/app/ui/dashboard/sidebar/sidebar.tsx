@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import { MenuLink } from './menuLink/menu-link'
-import styles from './sidebar.module.css'
-import { menuItems } from './sidebar-menuItems'
 import { MdLogout } from 'react-icons/md'
 import { auth, signOut } from '@/app/auth'
+import { MenuLink } from './menuLink/menu-link'
+import { menuItems } from './sidebar-menuItems'
+import styles from './sidebar.module.css'
 
 export const Sidebar = async () => {
   const session = await auth()

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import styles from './rightbar.module.css'
 import { MdPlayCircleFilled } from 'react-icons/md'
+import styles from './rightbar.module.css'
 
 export const Rightbar = () => {
   return (
