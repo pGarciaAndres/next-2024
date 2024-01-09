@@ -23,6 +23,10 @@
     margin-bottom: 10px;
 }
 
+.image {
+    object-fit: cover;
+}
+
 .formContainer {
     flex: 3;
     background-color: var(--bgSoft);

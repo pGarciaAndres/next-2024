@@ -4,6 +4,8 @@ import { Search } from '../search/search'
 import { Pagination } from '@/app/ui/dashboard/pagination/pagination'
 import styles from '@/app/ui/dashboard/products/products.module.css'
 import { fetchProducts } from '@/app/lib/data'
+import { deleteProduct } from '@/app/lib/actions'
+import { INIT_PAGE } from '@/app/lib/constants'
 
 type Props = {
   searchParams: {
@@ -13,7 +15,7 @@ type Props = {
 }
 
 export default async function ProductsPage({ searchParams }: Props) {
-  const { q = '', page = 1 } = searchParams
+  const { q = '', page = INIT_PAGE } = searchParams
   const { count, products } = await fetchProducts(q, page)
 
   return (
@@ -61,9 +63,12 @@ export default async function ProductsPage({ searchParams }: Props) {
                       View
                     </button>
                   </Link>
-                  <button className={`${styles.button} ${styles.delete}`}>
-                    Delete
-                  </button>
+                  <form action={deleteProduct}>
+                    <input type='hidden' name='id' value={product.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>

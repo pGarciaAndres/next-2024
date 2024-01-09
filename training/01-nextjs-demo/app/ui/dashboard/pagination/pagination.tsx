@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation'
 import styles from './pagination.module.css'
+import { INIT_PAGE, PER_PAGE } from '@/app/lib/constants'
 
 type Props = {
   count: number
@@ -10,8 +11,8 @@ type Props = {
 export const Pagination = ({ count }: Props) => {
   const { replace } = useRouter()
   const searchParams = useSearchParams()
-  const page = searchParams.get('page') || '1'
-  const ITEMS_PER_PAGE = 1
+  const page = searchParams.get('page') || INIT_PAGE.toString()
+  const ITEMS_PER_PAGE = PER_PAGE
 
   const hasPrev = ITEMS_PER_PAGE * (parseInt(page) - 1) > 0
   const hasNext = ITEMS_PER_PAGE * (parseInt(page) - 1) + ITEMS_PER_PAGE < count
