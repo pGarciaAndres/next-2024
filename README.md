@@ -1,6 +1,7 @@
-# Next Js 2024 ![image](https://github.com/pGarciaAndres/next-2024/assets/30140745/6fb4e3bb-4815-4ebd-aed0-a35222b62e0e)
+# Next Js 2024 ![image](https://github.com/pGarciaAndres/next-2024/assets/30140745/e1c2215d-345a-4492-92f5-366d676c3eb4)
 
 
-| Project       | Description                                                     | Code                                  |
-| ------------- | --------------------------------------------------------------- | ------------------------------------- |
-| Basic REST API| Get, Get by key, Post, Delete, Patch states and Zod Validation  | [Ver](projects/04-express-rest-api/)  |
+| Projects                   | Description                                                     | Code                                  |
+| -------------------------- | --------------------------------------------------------------- | ------------------------------------- |
+| NextJS Demo                | Routing, Data Fetching from MongoDB, Server Actions, CSS Module | [Ver](training/01-nextjs-demo/)       |
+| NextJS Personal Project    | In Progress                                                     | [Ver](projects/nextjs-project/)       |
