@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.5rem;
+    min-height: 100vh;
+    background: no-repeat url('/background.png');
+    background-size: cover;
+    background-position: top;
+}
+

@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: 1075px) {
+        flex-basis: 48%;
+    }
+}
+
+.status {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-style: dotted;
+    width: 100%;
+}
+
+.statusForm {
+    display: flex;
+    gap: 1px;
+}
+
+.statusForm > label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--cube-text-size);
+    color: var(--cube-text-color);
+    width: var(--cube-size);
+    height: var(--cube-size);
+    transition: background-color .5s, top .1s;
+    box-shadow: 1px 1px 1px 1px #aaa;
+    cursor: pointer;
+}
+
+.statusForm > input[type="checkbox"] {
+    width: 0em;
+}
+
+.statusForm > input[type=checkbox]:checked + label {
+  background-color: #787878;
+  color: white;
+}
