@@ -1,17 +1,28 @@
 export const authConfig = {
-  providers:[],
+  providers: [],
   pages: {
-    signIn: "/login",
+    signIn: '/login'
   },
   callbacks: {
     authorized({ auth, request }: any) {
-      if (request.nextUrl.pathname.startsWith("/statuses")) {
-        if (auth?.user) return true;
-        return false;
-      } else if (auth?.user) {
-        return Response.redirect(new URL("/statuses", request.nextUrl));
+      const url = request.nextUrl.pathname
+      if (isAllowedUrl(url)) {
+        if (auth?.user) {
+          return true
+        } else {
+          return Response.redirect(new URL('/login', request.nextUrl))
+        }
       }
-      return false;
+
+      return false
     }
-  },
-};
+  }
+}
+
+function isAllowedUrl(url: string) {
+  return (
+    url.startsWith('/notes') ||
+    url.startsWith('/health') ||
+    url.startsWith('/statuses')
+  )
+}

@@ -1,0 +1,15 @@
+.noteForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.text {
+  resize: none;
+  font-family: monospace;
+}

@@ -1,6 +1,8 @@
-export const mockStatuses = [
+import { Status } from './status/model'
+
+export const mockStatuses: Status[] = [
   {
-    id: '65abaf130576575d3753cf94',
+    _id: '65abaf130576575d3753cf94',
     key: 'left_behind',
     title: 'Abandonado',
     size: 9,
@@ -8,7 +10,7 @@ export const mockStatuses = [
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf95',
+    _id: '65abaf130576575d3753cf95',
     key: 'supplying_the_revolt',
     title: 'Abasteciendo la revuelta',
     size: 4,
@@ -16,7 +18,7 @@ export const mockStatuses = [
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf96',
+    _id: '65abaf130576575d3753cf96',
     key: 'allies_of_avalon',
     title: 'Aliados de Ávalon',
     size: 5,
@@ -24,7 +26,7 @@ export const mockStatuses = [
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf97',
+    _id: '65abaf130576575d3753cf97',
     key: 'something_is_watching',
     title: 'Algo te observa',
     subtitle:
@@ -34,7 +36,7 @@ export const mockStatuses = [
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf98',
+    _id: '65abaf130576575d3753cf98',
     key: 'helping_the_knights',
     title: 'Ayudando a los caballeros',
     size: 4,
@@ -42,15 +44,15 @@ export const mockStatuses = [
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf99',
+    _id: '65abaf130576575d3753cf99',
     key: 'lost_and_fallen',
-    title: 'Caído y perdido',
+    title: 'Caído y perd_ido',
     size: 7,
     counted: true,
     checked: []
   },
   {
-    id: '65abaf130576575d3753cf9a',
+    _id: '65abaf130576575d3753cf9a',
     key: 'back_cauldron',
     title: 'Caldero negro',
     size: 3,

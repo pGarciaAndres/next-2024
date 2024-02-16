@@ -1,9 +1,10 @@
 'use client'
+
 import { toast } from 'react-toastify'
-import { Status as StatusModel } from '../status/model'
-import { ACCEPT, FAILED, SAVE_CHANGES, SUCCESS } from '@/app/utils/constants'
+import { Status as StatusModel } from '@/app/statuses/statusList/status/model'
 import { updateStatus } from '@/app/lib/actions'
 import { Status } from '@/app/statuses/statusList/status/status'
+import { ACCEPT, FAILED, SAVE_CHANGES, SUCCESS } from '@/app/utils/constants'
 import styles from './statusForm.module.css'
 
 export const StatusForm = async ({
@@ -38,21 +39,20 @@ export const StatusForm = async ({
   }
 
   const handleSubmit = async (updateForm: FormData) => {
-    debugger
     const response = await updateStatus(updateForm)
     if (response?.error) {
       toast.error(<span>{FAILED}</span>, {
-        autoClose: 2000,
+        autoClose: 1500,
         hideProgressBar: true,
         style: { backgroundColor: '#b83d3d' }
       })
+    } else {
+      toast.success(<span>{SUCCESS}</span>, {
+        autoClose: 1500,
+        hideProgressBar: true,
+        style: { backgroundColor: '#4e9e48' }
+      })
     }
-
-    toast.success(<span>{SUCCESS}</span>, {
-      autoClose: 2000,
-      hideProgressBar: true,
-      style: { backgroundColor: '#4e9e48' }
-    })
   }
 
   return (
@@ -60,7 +60,7 @@ export const StatusForm = async ({
       id='statusesForm'
       action={handleSubmit}
       onChange={hangleChange}
-      className={styles.form}
+      className={styles.statusesForm}
     >
       <input type='hidden' name='id' value={id} />
       {statuses?.map((status: StatusModel, index: number) => (

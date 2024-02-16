@@ -1,27 +1,8 @@
 'use server'
 
-import { signIn } from '../auth'
-import { Status } from '../statuses/statusList/status/model'
-import { Statuses } from './models'
-import { connect } from './utils'
-
-export const authenticate = async (loginForm: FormData) => {
-  const { username, password } = Object.fromEntries(loginForm)
-
-  try {
-    await signIn('credentials', { username, password })
-  } catch (error: any) {
-    if (error.message.includes('credentialssignin')) {
-      return { error: 'Incorrect username or password' }
-    }
-
-    if (error.message.includes('error')) {
-      return { error: 'Something went wrong' }
-    }
-
-    throw error
-  }
-}
+import { Statuses } from '@/app/lib/models'
+import { connect } from '@/app/lib/utils'
+import { Status } from '@/app/statuses/statusList/status/model'
 
 export const updateStatus = async (updateForm: FormData) => {
   try {

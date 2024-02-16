@@ -1,33 +1,5 @@
 import mongoose from 'mongoose'
 
-const userSchema = new mongoose.Schema(
-  {
-    id: {
-      type: String,
-      required: true,
-      unique: true
-    },
-    username: {
-      type: String,
-      required: true,
-      unique: true,
-      min: 3,
-      max: 20
-    },
-    password: {
-      type: String,
-      required: true
-    },
-    isAdmin: {
-      type: Boolean,
-      default: false
-    }
-  },
-  {
-    timestamps: true
-  }
-)
-
 const statusSchema = new mongoose.Schema({
   key: {
     type: String,
@@ -67,7 +39,6 @@ const statusesSchema = new mongoose.Schema(
   }
 )
 
-export const User = mongoose.models?.User || mongoose.model('User', userSchema)
 export const Statuses =
   mongoose.models?.Statuses || mongoose.model('Statuses', statusesSchema)
 export const Status =

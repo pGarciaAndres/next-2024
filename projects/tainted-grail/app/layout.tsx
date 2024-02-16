@@ -1,3 +1,5 @@
+import { PrimeReactProvider } from 'primereact/api'
+import Tailwind from 'primereact/passthrough/tailwind'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './ui/globals.css'
@@ -16,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <PrimeReactProvider value={{ unstyled: true, pt: Tailwind }}>
+        <body className={inter.className}>{children}</body>
+      </PrimeReactProvider>
     </html>
   )
 }

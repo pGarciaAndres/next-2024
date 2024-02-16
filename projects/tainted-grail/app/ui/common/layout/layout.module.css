@@ -1,0 +1,25 @@
+.layout {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@font-face {
+  font-family: celtic;
+  src: url('../../../fonts/celtic.ttf') format('truetype');
+}
+
+.title {
+  font-family: 'celtic';
+  font-size: 40px;
+  margin-left: -10px;
+}
