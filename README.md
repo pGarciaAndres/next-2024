@@ -4,4 +4,4 @@
 | Projects                   | Description                                                     | Code                                  |
 | -------------------------- | --------------------------------------------------------------- | ------------------------------------- |
 | NextJS Demo                | Routing, Data Fetching from MongoDB, Server Actions, CSS Module | [Ver](training/01-nextjs-demo/)       |
-| NextJS Personal Project    | In Progress                                                     | [Ver](projects/nextjs-project/)       |
+| NextJS Personal Project    | In Progress                                                     | [Ver](projects/tainted-grail/)       |
