@@ -7,7 +7,8 @@ export const authenticate = async (loginForm: FormData) => {
   const { username, password } = Object.fromEntries(loginForm)
 
   try {
-    await signIn('credentials', { username, password })
+    await signIn('credentials', { username, password, redirectTo: '/notes' })
+    return { error: false }
   } catch (error: any) {
     if (error.message.includes('credentialssignin')) {
       return { error: 'Incorrect username or password' }
