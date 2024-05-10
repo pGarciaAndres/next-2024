@@ -16,7 +16,8 @@ export const StatusList = async ({ searchParams }: Props) => {
   const session = await auth()
   const { user } = session as Session
   const { q = EMPTY_STRING } = searchParams
-  const response = await fetchStatuses(user._doc._id, q)
+  const userId = user._id ?? user._doc._id
+  const response = await fetchStatuses(userId, q)
   const { id, statuses } = JSON.parse(response)
   // const statuses = mockStatuses
   // const id = '1'

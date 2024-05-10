@@ -8,7 +8,8 @@ import { Note as NoteModel } from './note/model'
 export const NoteList = async () => {
   const session = await auth()
   const { user } = session as Session
-  const response = await fetchNotes(user._doc._id)
+  const userId = user._id ?? user._doc._id
+  const response = await fetchNotes(userId)
   const { id, notes } = JSON.parse(response)
   // const notes = mockNotes
   // const id = '2'
