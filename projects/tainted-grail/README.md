@@ -7,5 +7,6 @@
 
 ![image](https://github.com/pGarciaAndres/next-2024/assets/30140745/7935c1bb-2deb-4a92-82c4-c14e2dba1310)
 
-![image](https://github.com/pGarciaAndres/next-2024/assets/30140745/6347407d-26f0-42d1-b101-176d2026860b)
+![image](https://github.com/pGarciaAndres/next-2024/assets/30140745/14c889ea-7a6e-4716-9a35-179c3900e1a9)
+
 
