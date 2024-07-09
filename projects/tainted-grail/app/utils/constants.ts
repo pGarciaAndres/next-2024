@@ -15,3 +15,10 @@ export const FAILED = 'Error al guardar!'
 // Notes
 export const LOC_PLACEHOLDER = '101'
 export const TEXT_PLACEHOLDER = 'Algo importante..'
+
+// Health
+export const FOOD_LABEL = 'COMIDA'
+export const WEALTH_LABEL = 'RIQUEZA'
+export const REP_LABEL = 'REP'
+export const EXP_LABEL = 'EXP'
+export const MAGIC_LABEL = 'MAGIA'

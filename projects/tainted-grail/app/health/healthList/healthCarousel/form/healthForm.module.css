@@ -1,0 +1,64 @@
+@font-face {
+  font-family: celtic;
+  src: url('../../../../fonts/celtic.ttf') format('truetype');
+}
+
+.healthForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.name {
+  font-family: 'celtic';
+  font-size: 30px;
+  display: flex;
+  gap: 0.5em;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.primary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-rows: repeat(3, 1fr); /* 3 filas iguales */
+  gap: 10px; /* Espacio entre elementos */
+}
+
+.primaryItem {
+  font-family: 'celtic';
+  font-size: 4vmin;
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.secondary {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+  grid-template-rows: repeat(1, 1fr); /* 3 filas iguales */
+  justify-content: center;
+}
+
+.secondaryItem {
+  font-family: 'celtic';
+  font-size: 3vmin;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  text-align: center;
+}
+
+.location {
+  width: 3em;
+  font-size: 25px;
+}

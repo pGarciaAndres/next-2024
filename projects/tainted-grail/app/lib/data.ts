@@ -1,5 +1,5 @@
 import { Status } from '@/app/statuses/statusList/status/model'
-import { Notes, Statuses } from './models'
+import { Healths, Notes, Statuses } from './models'
 import { connect } from './utils'
 
 export const fetchStatuses = async (id: string, query: string) => {
@@ -23,5 +23,16 @@ export const fetchNotes = async (id: string) => {
     return JSON.stringify({ id, notes })
   } catch (error) {
     throw new Error('Failed to fetch notes')
+  }
+}
+
+export const fetchHealths = async (id: string) => {
+  try {
+    connect()
+    const result = await Healths.findById(id)
+    const healths = result?.healths ?? []
+    return JSON.stringify({ id, healths })
+  } catch (error) {
+    throw new Error('Failed to fetch healths')
   }
 }

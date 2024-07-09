@@ -6,10 +6,10 @@ import {
   FAILED,
   SUCCESS,
   LOC_PLACEHOLDER,
-  TEXT_PLACEHOLDER
+  TEXT_PLACEHOLDER,
 } from '@/app/utils/constants'
 import { Note as NoteModel } from './model'
-import { updateNote } from '@/app/lib/actions'
+import { removeNote, updateNote } from '@/app/lib/actions'
 import { NoteButtons as Buttons } from './buttons/noteButtons'
 import styles from './note.module.css'
 
@@ -63,23 +63,26 @@ export const Note = (props: Props) => {
         toast.error(<span>{FAILED}</span>, {
           autoClose: 1500,
           hideProgressBar: true,
-          style: { backgroundColor: '#b83d3d' }
+          style: { backgroundColor: '#b83d3d' },
         })
       } else {
+        setRollbackLocation(formData.get('location') as string)
+        setRollbackText(formData.get('text') as string)
+
         toast.success(<span>{SUCCESS}</span>, {
           autoClose: 1500,
           hideProgressBar: true,
-          style: { backgroundColor: '#4e9e48' }
+          style: { backgroundColor: '#4e9e48' },
         })
       }
     } else {
       console.log('delete')
-      // response = await removeNote(id)
+      response = await removeNote(id)
     }
 
-    // if (response?.error) {
-    //   console.error(response.error)
-    // }
+    if (response?.error) {
+      console.error(response.error)
+    }
   }
 
   return (

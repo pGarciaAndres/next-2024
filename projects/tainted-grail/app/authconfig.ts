@@ -1,12 +1,11 @@
 export const authConfig = {
   providers: [],
   pages: {
-    signIn: '/login'
+    signIn: '/login',
   },
   callbacks: {
     authorized({ auth, request }: any) {
-      const url = request.nextUrl.pathname
-      if (isAllowedUrl(url)) {
+      if (isAllowedUrl(request.nextUrl.pathname)) {
         if (auth?.user) {
           return true
         } else {
@@ -15,8 +14,8 @@ export const authConfig = {
       }
 
       return false
-    }
-  }
+    },
+  },
 }
 
 function isAllowedUrl(url: string) {

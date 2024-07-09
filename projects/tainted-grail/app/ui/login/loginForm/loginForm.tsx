@@ -1,7 +1,7 @@
 'use client'
 
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { toast } from 'react-toastify'
 import { authenticate } from '@/app/lib/actions'
 import { EMPTY_STRING } from '@/app/utils/constants'
 import styles from './loginForm.module.css'

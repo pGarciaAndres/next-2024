@@ -1,0 +1,23 @@
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toastButton {
+  padding: 8px 12px;
+  margin: 0;
+  background: #fcfcfc;
+  border: 1px solid #f3f3f3;
+  white-space: nowrap;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #171717;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.toastButton:hover {
+  background: #f3f3f3;
+  border-color: #dbdbdb;
+}

@@ -18,10 +18,10 @@
 .topRightSmallIn {
   position: absolute;
   border: 1px solid white;
-  width: 10px;
+  width: 11px;
   height: 10px;
   top: 104px;
-  right: 43.5px;
+  right: 43px;
   border-top: 1px solid black;
   border-right: 1px solid black;
 }
